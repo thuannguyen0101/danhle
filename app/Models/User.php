@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    // comment test git
     use HasFactory, Notifiable;
 
     /**
