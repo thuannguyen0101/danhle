@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\MicrosoftController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin/sign-in',[MicrosoftController::class,'ms_login'])->name('ms_login');
+Route::get('/callback',[MicrosoftController::class,'callback'])->name('show_sign_in_view');
