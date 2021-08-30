@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Department extends Model
+class Team extends Model
 {
     use CrudTrait;
 
@@ -15,7 +15,7 @@ class Department extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'departments';
+    protected $table = 'teams';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -23,9 +23,7 @@ class Department extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
-    public function profileWork(){
-        return $this->hasMany(ProfileWork::class);
-    }
+
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +54,4 @@ class Department extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
-    public function manager(){
-        return $this->belongsTo(User::class,'manager_id');
-    }
 }
