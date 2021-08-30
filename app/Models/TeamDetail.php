@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class ProfileWord extends Model
+class TeamDetail extends Model
 {
     use CrudTrait;
 
@@ -15,7 +15,7 @@ class ProfileWord extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'profile_words';
+    protected $table = 'team_details';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];

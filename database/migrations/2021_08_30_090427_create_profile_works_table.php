@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfileWordTable extends Migration
+class CreateProfileWorksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProfileWordTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile_words', function (Blueprint $table) {
+        Schema::create('profile_works', function (Blueprint $table) {
             $table->id();
             $table->integer('employee_id');
             $table->integer('department_id');
@@ -32,6 +32,6 @@ class CreateProfileWordTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile_word');
+        Schema::dropIfExists('profile_works');
     }
 }

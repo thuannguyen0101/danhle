@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ProfileWordRequest;
+use App\Http\Requests\TeamDetailRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class ProfileWordCrudController
+ * Class TeamDetailCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class ProfileWordCrudController extends CrudController
+class TeamDetailCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class ProfileWordCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\ProfileWord::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/profile-word');
-        CRUD::setEntityNameStrings('profile word', 'profile words');
+        CRUD::setModel(\App\Models\TeamDetail::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/team-detail');
+        CRUD::setEntityNameStrings('team detail', 'team details');
     }
 
     /**
@@ -56,7 +56,7 @@ class ProfileWordCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(ProfileWordRequest::class);
+        CRUD::setValidation(TeamDetailRequest::class);
 
         CRUD::setFromDb(); // fields
 
