@@ -6,12 +6,16 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "adnanhussainturki/microsoft-api-php": "^0.03.0",
         "backpack/crud": "4.1.*",
+        "backpack/permissionmanager": "^6.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "league/oauth2-client": "^2.6",
+        "microsoft/microsoft-graph": "^1.37",
+        "ext-json": "*"
     },
     "require-dev": {
         "backpack/generators": "^3.1",
